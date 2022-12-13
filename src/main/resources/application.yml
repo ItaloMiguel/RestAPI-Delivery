@@ -1,0 +1,20 @@
+#Setup server port to be 8080
+server:
+  port: 8080
+
+# Setup mysql database config
+spring:
+  application:
+    name: delivery
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/delivery
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: true
